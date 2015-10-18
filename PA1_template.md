@@ -3,7 +3,6 @@
 
 ## Loading and preprocessing the data
 
-
 ```r
 library(dplyr)
 ```
@@ -157,7 +156,6 @@ interval_maxnoofsteps
 
 ## Imputing missing values
 
-
 ```r
 ###Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 total_na <- sum(is.na(activity))
@@ -171,7 +169,7 @@ total_na
 ```r
 ###Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
-####using the median of the steps of each intervals across the days to fill the missing values
+####made use of the the median of the steps of each intervals across the days to fill the missing values
 medianintervalsacrossalldays <- summarize(byinterval,median_steps = median(steps,na.rm =TRUE))
 
 activity2 <- activity

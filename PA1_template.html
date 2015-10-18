@@ -181,7 +181,7 @@ total_na</code></pre>
 <pre><code>## [1] 2304</code></pre>
 <pre class="r"><code>###Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
-####using the median of the steps of each intervals across the days to fill the missing values
+####made use of the the median of the steps of each intervals across the days to fill the missing values
 medianintervalsacrossalldays &lt;- summarize(byinterval,median_steps = median(steps,na.rm =TRUE))
 
 activity2 &lt;- activity
